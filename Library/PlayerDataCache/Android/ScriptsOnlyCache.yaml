@@ -566,4 +566,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity
-  playerPath: /home/michaelhirsch/git/nightmareRunner/Builds/firstTest.apk
+  playerPath: /home/michaelhirsch/git/nightmareRunner/Builds/0.02.apk
