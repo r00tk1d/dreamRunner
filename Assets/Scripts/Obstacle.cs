@@ -22,6 +22,7 @@ public class Obstacle : MonoBehaviour
         //Debug.Log("collision name = " + col.gameObject.name);
         if(col.gameObject.tag == "Player") {
             Destroy(col.gameObject);
+            FindObjectOfType<GameManager>().EndGame();
         }
         
     }
