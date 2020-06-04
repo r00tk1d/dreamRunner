@@ -22,4 +22,5 @@ public class BGLooper : MonoBehaviour
         offset.x = offset.x + speed * Time.deltaTime;
         mat.SetTextureOffset("_MainTex", offset);
     }
+
 }
