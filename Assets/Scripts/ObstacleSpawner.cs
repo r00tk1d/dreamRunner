@@ -5,29 +5,76 @@ using UnityEngine;
 public class ObstacleSpawner : MonoBehaviour
 {
     public GameObject[] obstacles;
-    public float spawnTime = 2.0f;
+    public float spawnTime = 20.0f;
+    public float speed = -3.0f;
     private Vector3 spawnLocation = new Vector3(12.0f, 0.0f, 0.0f);
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(ExampleCoroutine());
-        //InvokeRepeating("InitObstacles",0.0f,spawnTime);
+        StartCoroutine(SpawnObstacle());
     }
 
-    IEnumerator ExampleCoroutine()
+    IEnumerator SpawnObstacle()
     {
-        // TODO solange der Spieler lebt
-        while(true){
+        while (true)
+        {
             yield return new WaitForSeconds(spawnTime);
-            Instantiate(obstacles[0], spawnLocation, Quaternion.identity);
-            
-            //increase spawntime
-            if(spawnTime > 0.6){
-                spawnTime = spawnTime - 0.03f;
+            int random = (int)Random.Range(0.0f, (float)obstacles.Length);
+            switch (random)
+            {
+                case 0:
+                    SpawnChocolate();
+                    break;
+                case 1:
+                    SpawnRock();
+                    break;
+                default:
+                    Debug.Log("Error: No Obstacle with id " + random);
+                    break;
             }
 
-            spawnLocation.y = Random.Range(-4.5f, 4.5f);
+
+            // increase Obstacle speed
+            //speed = speed - 0.1f;
+
+
+            // decrease slowly spawntime, then random
+            /*
+            if (spawnTime > 0.5)
+            {
+                spawnTime = spawnTime - 0.03f;
+            }
+            else
+            {
+                spawnTime = Random.Range(0.3f, 0.6f);
+            }
+            */
+
+            // random spawnlocation
+
         }
     }
-    
+
+    void SpawnChocolate()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = -4; j < 5; j = j + 2)
+            {
+                Debug.Log(i);
+                spawnLocation.y = j;
+                GameObject go = Instantiate(obstacles[1], spawnLocation, Quaternion.identity);
+                go.SendMessage("setSpeed", speed);
+            }
+            spawnLocation.x = spawnLocation.x + 2;
+
+        }
+    }
+
+    void SpawnRock()
+    {
+        spawnLocation.y = Random.Range(-4.5f, 4.5f);
+        GameObject go = Instantiate(obstacles[0], spawnLocation, Quaternion.identity);
+        go.SendMessage("setSpeed", speed);
+    }
 }
