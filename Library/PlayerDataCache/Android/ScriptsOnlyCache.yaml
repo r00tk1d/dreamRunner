@@ -6,9 +6,11 @@ ScriptsOnlyBuild:
     - FloatingJoystick
     - GameManager
     - HighScore
-    - Obstacle
+    - ObstacleChocolate
+    - ObstacleRock
     - ObstacleSpawner
-    - RandomObstacleSpawner
+    - PauseButton
+    - PauseMenu
     - Score
     - spaceship
     Unity.2D.Animation.Editor.dll:
@@ -28,9 +30,11 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Shadow
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/MainScene.unity:
@@ -60,6 +64,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
@@ -67,33 +75,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11174}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 11688}
+      Script: {instanceID: 11464}
     - Class: 114
-      Script: {instanceID: 11706}
+      Script: {instanceID: 11636}
     - Class: 114
-      Script: {instanceID: 12182}
+      Script: {instanceID: 11692}
     - Class: 114
-      Script: {instanceID: 12436}
+      Script: {instanceID: 11710}
     - Class: 114
-      Script: {instanceID: 12460}
+      Script: {instanceID: 12066}
     - Class: 114
-      Script: {instanceID: 12548}
+      Script: {instanceID: 12186}
     - Class: 114
-      Script: {instanceID: 13512}
+      Script: {instanceID: 12440}
     - Class: 114
-      Script: {instanceID: 13654}
+      Script: {instanceID: 12464}
     - Class: 114
-      Script: {instanceID: 14042}
+      Script: {instanceID: 12552}
     - Class: 114
-      Script: {instanceID: 14150}
+      Script: {instanceID: 12892}
     - Class: 114
-      Script: {instanceID: 14272}
+      Script: {instanceID: 13350}
     - Class: 114
-      Script: {instanceID: 14372}
+      Script: {instanceID: 13438}
     - Class: 114
-      Script: {instanceID: 16602}
+      Script: {instanceID: 13522}
+    - Class: 114
+      Script: {instanceID: 13664}
+    - Class: 114
+      Script: {instanceID: 14158}
+    - Class: 114
+      Script: {instanceID: 14280}
+    - Class: 114
+      Script: {instanceID: 14380}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -131,6 +147,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ObstacleRock
   - hash:
       serializedVersion: 2
       Hash: c42672c997f8be6b1aa86a927ebea785
@@ -221,6 +243,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: c8c5e65e9fb858572516474d6e2102bc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenu
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
@@ -511,10 +539,22 @@ ScriptsOnlyBuild:
     className: FixedJoystick
   - hash:
       serializedVersion: 2
+      Hash: 2e853154df9c37ced08faac5d00b7ae8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ObstacleSpawner
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseButton
   - hash:
       serializedVersion: 2
       Hash: 8ad90ab74f26bb8f9088f5aaa057bd03
@@ -563,12 +603,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
-  - hash:
-      serializedVersion: 2
-      Hash: bec6c4d61dcc25a7a7887bdf3700ba8f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: RandomObstacleSpawner
   - hash:
       serializedVersion: 2
       Hash: 21d73eda81c18eacd2c91ad5dfaf2e32
@@ -676,20 +710,14 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Obstacle
+    className: ObstacleChocolate
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: bec6c4d61dcc25a7a7887bdf3700ba8f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ObstacleSpawner
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity
-  playerPath: /home/michaelhirsch/git/nightmareRunner/Builds/0.0.7.apk
+  playerPath: /home/michaelhirsch/git/nightmareRunner/Builds/0.0.8JoystickSmaller.apk

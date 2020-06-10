@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     }
 
     void Restart(){
+        Obstacle.setSpeed(DefValues.startSpeed);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
