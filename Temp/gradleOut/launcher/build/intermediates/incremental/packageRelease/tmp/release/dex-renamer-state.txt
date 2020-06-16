@@ -1,0 +1,4 @@
+#Tue Jun 16 17:10:23 CEST 2020
+base.0=/home/michaelhirsch/git/nightmareRunner/Temp/gradleOut/launcher/build/intermediates/transforms/dexMerger/release/0
+path.0=classes.dex
+renamed.0=classes.dex

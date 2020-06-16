@@ -21,7 +21,6 @@ public class ObstacleSpawner : MonoBehaviour
             spawnTime = spawnTime - DefValues.decreaseSpawnTime;
             Obstacle.setSpeed(Obstacle.getSpeed() - DefValues.increaseSpeed);
             float random = Random.Range(0.0f, (float)obstacles.Length);
-            Debug.Log(random);
             switch ((int)random)
             {
                 case 0:

@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
+    void Start()
+    {
+        pauseMenuUI.SetActive(false);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -22,7 +27,6 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        Debug.Log("Resume");
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         PauseButton.isPaused = false;
@@ -30,16 +34,17 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
-        Debug.Log("Pause funct");
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
     }
 
     public void LoadMenu(){
-        //TODO LoadMenu
+        Resume();
+        SceneManager.LoadScene("StartMenuScene");
     }
 
     public void RestartGame(){
         FindObjectOfType<GameManager>().EndGame();
+        Resume();
     }
 }

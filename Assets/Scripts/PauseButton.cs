@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// look PauseMenu for better understanding
 public class PauseButton : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -17,14 +18,20 @@ public class PauseButton : MonoBehaviour
     void TaskOnClick(){
         if(isPaused){
             isPaused = false;
-            btn.GetComponentInChildren<Text>().text = "||";
             Time.timeScale = 1f;
         }
         else{
             isPaused = true;
-            btn.GetComponentInChildren<Text>().text = "|>";
             Time.timeScale = 0f;
         }
-        Debug.Log(isPaused);
+    }
+
+    void Update(){
+        if(isPaused){
+            btn.GetComponentInChildren<Text>().text = "|>";
+        } else {
+            btn.GetComponentInChildren<Text>().text = "||";
+        }
+        
     }
 }
