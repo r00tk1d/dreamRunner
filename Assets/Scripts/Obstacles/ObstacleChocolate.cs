@@ -34,10 +34,4 @@ public class ObstacleChocolate : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
-    void OnMouseDown()
-    {
-        Destroy(gameObject);
-        FindObjectOfType<Score>().score++;
-    }
 }
