@@ -38,6 +38,7 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.AspectRatioFitter
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
@@ -161,6 +162,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 109
@@ -171,6 +176,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11196}
     - Class: 114
       Script: {instanceID: 11486}
+    - Class: 114
+      Script: {instanceID: 11832}
     - Class: 114
       Script: {instanceID: 12216}
     - Class: 114
