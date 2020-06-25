@@ -13,6 +13,4 @@ public static class Obstacle{
         speed = newSpeed;
     }
 
-
-
 }

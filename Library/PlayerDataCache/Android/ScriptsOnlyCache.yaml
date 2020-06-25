@@ -88,45 +88,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11172}
     - Class: 114
-      Script: {instanceID: 11196}
+      Script: {instanceID: 11862}
     - Class: 114
-      Script: {instanceID: 11214}
+      Script: {instanceID: 11882}
     - Class: 114
-      Script: {instanceID: 11486}
+      Script: {instanceID: 12204}
     - Class: 114
-      Script: {instanceID: 11662}
+      Script: {instanceID: 12404}
     - Class: 114
-      Script: {instanceID: 11718}
+      Script: {instanceID: 12464}
     - Class: 114
-      Script: {instanceID: 11736}
+      Script: {instanceID: 12486}
     - Class: 114
-      Script: {instanceID: 12092}
+      Script: {instanceID: 12888}
     - Class: 114
-      Script: {instanceID: 12216}
+      Script: {instanceID: 13038}
     - Class: 114
-      Script: {instanceID: 12476}
+      Script: {instanceID: 13338}
     - Class: 114
-      Script: {instanceID: 12500}
+      Script: {instanceID: 13366}
     - Class: 114
-      Script: {instanceID: 12590}
+      Script: {instanceID: 13462}
     - Class: 114
-      Script: {instanceID: 12936}
+      Script: {instanceID: 13880}
     - Class: 114
-      Script: {instanceID: 13408}
+      Script: {instanceID: 14434}
     - Class: 114
-      Script: {instanceID: 13498}
+      Script: {instanceID: 14536}
     - Class: 114
-      Script: {instanceID: 13590}
+      Script: {instanceID: 14644}
     - Class: 114
-      Script: {instanceID: 13734}
+      Script: {instanceID: 14814}
     - Class: 114
-      Script: {instanceID: 14254}
+      Script: {instanceID: 15424}
     - Class: 114
-      Script: {instanceID: 14376}
+      Script: {instanceID: 15558}
     - Class: 114
-      Script: {instanceID: 14408}
+      Script: {instanceID: 15592}
     - Class: 114
-      Script: {instanceID: 14478}
+      Script: {instanceID: 15674}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -173,31 +173,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11172}
     - Class: 114
-      Script: {instanceID: 11196}
+      Script: {instanceID: 11862}
     - Class: 114
-      Script: {instanceID: 11486}
+      Script: {instanceID: 12204}
     - Class: 114
-      Script: {instanceID: 11832}
+      Script: {instanceID: 12606}
     - Class: 114
-      Script: {instanceID: 12216}
+      Script: {instanceID: 13038}
     - Class: 114
-      Script: {instanceID: 12270}
+      Script: {instanceID: 13104}
     - Class: 114
-      Script: {instanceID: 12550}
+      Script: {instanceID: 13416}
     - Class: 114
-      Script: {instanceID: 12936}
+      Script: {instanceID: 13880}
     - Class: 114
-      Script: {instanceID: 13290}
+      Script: {instanceID: 14296}
     - Class: 114
-      Script: {instanceID: 13308}
+      Script: {instanceID: 14314}
     - Class: 114
-      Script: {instanceID: 13734}
+      Script: {instanceID: 14814}
     - Class: 114
-      Script: {instanceID: 14026}
+      Script: {instanceID: 15154}
     - Class: 114
-      Script: {instanceID: 14202}
+      Script: {instanceID: 15356}
     - Class: 114
-      Script: {instanceID: 14376}
+      Script: {instanceID: 15558}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1017,4 +1017,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/StartMenuScene.unity
   - Assets/Scenes/MainScene.unity
-  playerPath: /home/michaelhirsch/git/nightmareRunner/Builds/0.1.0.apk
+  playerPath: /home/michaelhirsch/git/nightmareRunner/Builds/0.1.0testing.apk
