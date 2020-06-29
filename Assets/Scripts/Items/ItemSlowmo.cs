@@ -19,21 +19,6 @@ public class ItemSlowmo : MonoBehaviour
         myRB.velocity = new Vector2(speed, 0);
     }
 
-    //Destroy player if obstacle hits player
-    IEnumerator OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "Player")
-        {
-            Debug.Log("Item collected");
-            Destroy(gameObject);
-            Time.timeScale = 0.5f;
-            yield return new WaitForSeconds(1f);
-            Debug.Log("on it goes");
-            Time.timeScale = 1.0f;
-        }
-
-    }
-
     void OnBecameInvisible()
     {
         Destroy(gameObject);
