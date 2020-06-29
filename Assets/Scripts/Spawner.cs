@@ -19,9 +19,8 @@ public class Spawner : MonoBehaviour
         {
             yield return new WaitForSeconds(spawnTime);
             spawnTime = spawnTime - DefValues.decreaseSpawnTime;
-            Obstacle.setSpeed(Obstacle.getSpeed() - DefValues.increaseSpeed);
-            //float random = Random.Range(0.0f, (float)obstacles.Length);
-            float random = 2.7f;
+            ObstacleSpeed.setSpeed(ObstacleSpeed.getSpeed() - DefValues.increaseSpeed);
+            float random = Random.Range(0.0f, (float)obstacles.Length);
             switch ((int)random)
             {
                 case 0:

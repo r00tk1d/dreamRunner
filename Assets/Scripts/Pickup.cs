@@ -14,7 +14,6 @@ public class Pickup : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("crashhhh");
         if (col.gameObject.tag == "Player")
         {
             for (int i = 0; i < inventory.slots.Length; i++)
