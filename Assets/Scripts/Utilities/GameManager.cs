@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     }
 
     void Restart(){
+        Time.timeScale = 1.0f;
         ObstacleSpeed.setSpeed(DefValues.startSpeed);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

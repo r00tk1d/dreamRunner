@@ -14,14 +14,20 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PauseButton.isPaused)
+        if (PauseButton.newStatus)
         {
-            Pause();
+            PauseButton.newStatus = false;
+            if (PauseButton.isPaused)
+            {
+                Pause();
+            }
+            else
+            {
+                Resume();
+            }
+
         }
-        else
-        {
-            Resume();
-        }
+
     }
 
 
@@ -36,12 +42,14 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
     }
 
-    public void LoadMenu(){
+    public void LoadMenu()
+    {
         PauseButton.Resume();
         SceneManager.LoadScene("StartMenuScene");
     }
 
-    public void RestartGame(){
+    public void RestartGame()
+    {
         FindObjectOfType<GameManager>().EndGame();
         PauseButton.Resume();
     }

@@ -8,6 +8,7 @@ public class PauseButton : MonoBehaviour
 {
     // Start is called before the first frame update
     public static bool isPaused = false;
+    public static bool newStatus = false;
     private Button btn;
     void Start()
     {
@@ -16,6 +17,7 @@ public class PauseButton : MonoBehaviour
     }
 
     void TaskOnClick(){
+        newStatus = true;
         if(isPaused){
             Resume();
         }

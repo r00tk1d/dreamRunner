@@ -48,6 +48,7 @@ public class Spawner : MonoBehaviour
             }
 
         }
+        yield return null;
     }
 
     void SpawnChocolate()
