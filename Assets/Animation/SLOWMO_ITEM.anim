@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: slowmo_anim
+  m_Name: SLOWMO_ITEM
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -22,22 +22,22 @@ AnimationClip:
     - time: 0
       value: {fileID: -7403969822434128192, guid: 4654dae06c558da4e8651ea0f1986db4,
         type: 3}
-    - time: 0.083333336
+    - time: 0.16666667
       value: {fileID: 275608934036182387, guid: 4654dae06c558da4e8651ea0f1986db4,
         type: 3}
-    - time: 0.16666667
+    - time: 0.25
       value: {fileID: 6835809712390799957, guid: 4654dae06c558da4e8651ea0f1986db4,
         type: 3}
-    - time: 0.25
+    - time: 0.41666666
       value: {fileID: 706868540179679375, guid: 4654dae06c558da4e8651ea0f1986db4,
         type: 3}
-    - time: 0.33333334
+    - time: 0.5833333
       value: {fileID: 4186875636715827353, guid: 4654dae06c558da4e8651ea0f1986db4,
         type: 3}
-    - time: 0.41666666
+    - time: 0.6666667
       value: {fileID: 4303083667852392531, guid: 4654dae06c558da4e8651ea0f1986db4,
         type: 3}
-    - time: 0.5
+    - time: 0.8333333
       value: {fileID: -3803759256550927464, guid: 4654dae06c558da4e8651ea0f1986db4,
         type: 3}
     attribute: m_Sprite
@@ -71,7 +71,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5833333
+    m_StopTime: 0.9166666
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
