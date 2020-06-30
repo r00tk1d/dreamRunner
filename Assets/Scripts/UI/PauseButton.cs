@@ -17,12 +17,10 @@ public class PauseButton : MonoBehaviour
 
     void TaskOnClick(){
         if(isPaused){
-            isPaused = false;
-            Time.timeScale = 1f;
+            Resume();
         }
         else{
-            isPaused = true;
-            Time.timeScale = 0f;
+            Pause();
         }
     }
 
@@ -33,5 +31,15 @@ public class PauseButton : MonoBehaviour
             btn.GetComponentInChildren<Text>().text = "||";
         }
         
+    }
+
+    public static void Resume(){
+        isPaused = false;
+        Time.timeScale = 1f;
+    }
+
+    public static void Pause(){
+        isPaused = true;
+        Time.timeScale = 0f;
     }
 }
