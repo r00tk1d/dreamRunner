@@ -16,7 +16,8 @@ public class Obstacle : MonoBehaviour
     void Update()
     {
         speed = ObstacleSpeed.getSpeed();
-        myRB.velocity = new Vector2(speed, 0);
+        float tempY = myRB.velocity.y;
+        myRB.velocity = new Vector2(speed, tempY);
     }
 
     //Destroy player if obstacle hits player

@@ -42,6 +42,12 @@ public class Spawner : MonoBehaviour
                         SpawnRock();
                     }
                     break;
+                case 3:
+                    SpawnBouncing();
+                    break;
+                case 4:
+                    //also SpawnBouncing because its on slot 4 of the obstacles
+                    break;
                 default:
                     Debug.Log("Error: No Obstacle with id " + (int)random);
                     break;
@@ -83,5 +89,13 @@ public class Spawner : MonoBehaviour
     void SpawnItem(){
         spawnLocation.y = Random.Range(-4.5f, 4.5f);
         GameObject go = Instantiate(obstacles[2], spawnLocation, Quaternion.identity);
+    }
+
+    void SpawnBouncing(){
+        spawnLocation.y = -5f;
+        GameObject jelly = Instantiate(obstacles[3], spawnLocation, Quaternion.identity);
+        spawnLocation.y = 4.7f;
+        GameObject ball = Instantiate(obstacles[4], spawnLocation, Quaternion.identity);
+
     }
 }
