@@ -12,9 +12,12 @@ public class GameManager : MonoBehaviour
         if(gameHasEnded == false) {
             bool gameHasEnded = true;
             int currentScore = (int)FindObjectOfType<Score>().score;
+            PlayGamesController.PostToLeaderBoard((long)currentScore);
+            /**
             if(PlayerPrefs.GetInt("HighScore") < currentScore){
                 PlayerPrefs.SetInt("HighScore", currentScore);
             }
+            **/
             Restart();
         }
         
