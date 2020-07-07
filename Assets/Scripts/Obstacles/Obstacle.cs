@@ -23,10 +23,16 @@ public class Obstacle : MonoBehaviour
     //Destroy player if obstacle hits player
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Player")
+        if (GameObject.FindGameObjectsWithTag("Player").Length == 1 && col.gameObject.tag == "Player")
+        {
+            FindObjectOfType<GameManager>().EndGame();
+            Destroy(col.gameObject);
+        }
+        else if (col.gameObject.tag == "Player")
         {
             Destroy(col.gameObject);
-            FindObjectOfType<GameManager>().EndGame();
+
+
         }
 
     }

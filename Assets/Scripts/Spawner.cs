@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject[] obstacles;
+    public GameObject[] items;
     public float spawnTime = DefValues.spawnTime;
     private Vector3 spawnLocation = new Vector3(12.0f, 0.0f, 0.0f);
     // Start is called before the first frame update
@@ -18,39 +19,51 @@ public class Spawner : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(spawnTime);
+
+            //decrease spawntime
             spawnTime = spawnTime - DefValues.decreaseSpawnTime;
+
+            //increase overall obstaclespeed
             ObstacleSpeed.setSpeed(ObstacleSpeed.getSpeed() - DefValues.increaseSpeed);
-            float random = Random.Range(0.0f, (float)obstacles.Length);
-            switch ((int)random)
+
+            //obstacle or item
+            if (Random.value > 0.9f)
             {
-                case 0:
-                    if (random > 0.6f)
-                    {
-                        SpawnChocolate();
-                    }else{
+                //spawn Item
+                int itemNumber = (int)Random.Range(0.0f, (float)items.Length);
+                Debug.Log(itemNumber);
+                SpawnItem(itemNumber);
+            }
+            else
+            {
+                //spawn Obstacle
+                float random = Random.Range(0.0f, (float)obstacles.Length);
+
+                switch ((int)random)
+                {
+                    case 0:
+                        if (random > 0.6f)
+                        {
+                            SpawnChocolate();
+                        }
+                        else
+                        {
+                            SpawnRock();
+                        }
+                        break;
+                    case 1:
                         SpawnRock();
-                    }
-                    break;
-                case 1:
-                    SpawnRock();
-                    break;
-                case 2:
-                    if (random > 2.6f)
-                    {
-                        SpawnItem();
-                    }else{
-                        SpawnRock();
-                    }
-                    break;
-                case 3:
-                    SpawnBouncing();
-                    break;
-                case 4:
-                    //also SpawnBouncing because its on slot 4 of the obstacles
-                    break;
-                default:
-                    Debug.Log("Error: No Obstacle with id " + (int)random);
-                    break;
+                        break;
+                    case 2:
+                        SpawnBouncing();
+                        break;
+                    case 3:
+                        //also SpawnBouncing because its on slot 4 of the obstacles (nneds a fix)
+                        break;
+                    default:
+                        Debug.Log("Error: No Obstacle with id " + (int)random);
+                        break;
+                }
             }
 
         }
@@ -59,43 +72,34 @@ public class Spawner : MonoBehaviour
 
     void SpawnChocolate()
     {
-        //for (int i = 0; i < 3; i++)
-        //{
+
         for (int j = -4; j < 5; j = j + 2)
         {
             spawnLocation.y = j;
             GameObject go = Instantiate(obstacles[1], spawnLocation, Quaternion.identity);
         }
-        //spawnLocation.x = spawnLocation.x + 2;
 
-        //}
     }
 
     void SpawnRock()
     {
-        /**
-        int numberRocks = (int)Random.Range(0.0f, 5.5f);
-        for (int i = 0; i < numberRocks; i++)
-        {
-            
-        }
-        **/
-        //yield return new WaitForSeconds(numberRocks);
         spawnLocation.y = Random.Range(-4.5f, 4.5f);
         GameObject go = Instantiate(obstacles[0], spawnLocation, Quaternion.identity);
 
     }
 
-    void SpawnItem(){
+    void SpawnItem(int itemNumber)
+    {
         spawnLocation.y = Random.Range(-4.5f, 4.5f);
-        GameObject go = Instantiate(obstacles[2], spawnLocation, Quaternion.identity);
+        GameObject go = Instantiate(items[itemNumber], spawnLocation, Quaternion.identity);
     }
 
-    void SpawnBouncing(){
+    void SpawnBouncing()
+    {
         spawnLocation.y = -5f;
-        GameObject jelly = Instantiate(obstacles[3], spawnLocation, Quaternion.identity);
+        GameObject jelly = Instantiate(obstacles[2], spawnLocation, Quaternion.identity); //TODO index sollte nicht hardgecodet sein
         spawnLocation.y = 4.7f;
-        GameObject ball = Instantiate(obstacles[4], spawnLocation, Quaternion.identity);
+        GameObject ball = Instantiate(obstacles[3], spawnLocation, Quaternion.identity); //TODO index sollte nicht hardgecodet sein
 
     }
 }
