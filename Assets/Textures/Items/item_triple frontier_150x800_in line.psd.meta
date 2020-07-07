@@ -1,22 +1,31 @@
 fileFormatVersion: 2
-guid: 3f2c941efc75d81c98d5658b52565bfe
+guid: 9a95f2e77fa969b4fbf72913ca919b24
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2009241601987172788
-    second: Jelly_bounce_sequence_0
+      213: 2410986030681886989
+    second: item_triple frontier_150x800_in line_0
   - first:
-      213: -1924619522166577074
-    second: Jelly_bounce_sequence_1
+      213: 7936902813033630510
+    second: item_triple frontier_150x800_in line_1
   - first:
-      213: 4852231332621138251
-    second: Jelly_bounce_sequence_2
+      213: -7233113491615888471
+    second: item_triple frontier_150x800_in line_2
   - first:
-      213: -8344698351692047666
-    second: Jelly_bounce_sequence_3
+      213: -3686689539520349379
+    second: item_triple frontier_150x800_in line_3
   - first:
-      213: 7881213711064090859
-    second: Jelly_bounce_sequence_4
+      213: 6769138318418537130
+    second: item_triple frontier_150x800_in line_4
+  - first:
+      213: 3699221722366403370
+    second: item_triple frontier_150x800_in line_5
+  - first:
+      213: -7914183976519463330
+    second: item_triple frontier_150x800_in line_6
+  - first:
+      213: 8014047428361174274
+    second: item_triple frontier_150x800_in line_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -114,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jelly_bounce_sequence_0
+      name: item_triple frontier_150x800_in line_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 160
-        height: 160
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c462e9d886dbd14e0800000000000000
-      internalID: -2009241601987172788
+      spriteID: d01193d550b857120800000000000000
+      internalID: 2410986030681886989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jelly_bounce_sequence_1
+      name: item_triple frontier_150x800_in line_1
       rect:
         serializedVersion: 2
-        x: 160
+        x: 150
         y: 0
-        width: 160
-        height: 160
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e48aa7dddb06a45e0800000000000000
-      internalID: -1924619522166577074
+      spriteID: e2b0ba39e0b852e60800000000000000
+      internalID: 7936902813033630510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jelly_bounce_sequence_2
+      name: item_triple frontier_150x800_in line_2
       rect:
         serializedVersion: 2
-        x: 320
+        x: 300
         y: 0
-        width: 160
-        height: 160
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4937e450b6965340800000000000000
-      internalID: 4852231332621138251
+      spriteID: 9ab46202a91de9b90800000000000000
+      internalID: -7233113491615888471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jelly_bounce_sequence_3
+      name: item_triple frontier_150x800_in line_3
       rect:
         serializedVersion: 2
-        x: 480
+        x: 450
         y: 0
-        width: 160
-        height: 160
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eca9b9daf0da13c80800000000000000
-      internalID: -8344698351692047666
+      spriteID: d3bbdbf856f36dcc0800000000000000
+      internalID: -3686689539520349379
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jelly_bounce_sequence_4
+      name: item_triple frontier_150x800_in line_4
       rect:
         serializedVersion: 2
-        x: 640
+        x: 600
         y: 0
-        width: 160
-        height: 160
+        width: 150
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,8 +221,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be8c9ee1d12bf5d60800000000000000
-      internalID: 7881213711064090859
+      spriteID: aaa62d8af6fc0fd50800000000000000
+      internalID: 6769138318418537130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_triple frontier_150x800_in line_5
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23ee03ae86465330800000000000000
+      internalID: 3699221722366403370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_triple frontier_150x800_in line_6
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5e0870ca9b2b2290800000000000000
+      internalID: -7914183976519463330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: item_triple frontier_150x800_in line_7
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 0
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20db9940dad973f60800000000000000
+      internalID: 8014047428361174274
       vertices: []
       indices: 
       edges: []
