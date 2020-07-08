@@ -96,7 +96,7 @@ public class Spawner : MonoBehaviour
 
     void SpawnBouncing()
     {
-        spawnLocation.y = -5f;
+        spawnLocation.y = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).y + 0.7f;
         GameObject jelly = Instantiate(obstacles[2], spawnLocation, Quaternion.identity); //TODO index sollte nicht hardgecodet sein
         spawnLocation.y = 4.7f;
         GameObject ball = Instantiate(obstacles[3], spawnLocation, Quaternion.identity); //TODO index sollte nicht hardgecodet sein
