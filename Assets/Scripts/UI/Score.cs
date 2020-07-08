@@ -18,7 +18,9 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score += Time.deltaTime;
+        int bonusShips = GameObject.FindGameObjectsWithTag("bonusShip").Length;
+        Debug.Log(bonusShips);
+        score += Time.deltaTime * (bonusShips + 1);
         scoreText.text = "" + (int)score;
     }
 }

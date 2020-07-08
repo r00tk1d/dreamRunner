@@ -12,6 +12,17 @@ public class EffectTripleShip : MonoBehaviour
     {
         Vector3 shipLocation = GameObject.FindGameObjectWithTag("Player").transform.position;
 
+        GameObject[] bonusShips = GameObject.FindGameObjectsWithTag("bonusShip");
+
+        if(bonusShips.Length > 0)
+        {
+            for (var i = 0; i < bonusShips.Length; i++)
+            {
+                Destroy(bonusShips[i]);
+            }
+        }
+
+
 
         Vector3 spawnLocation1 = new Vector3(shipLocation.x, shipLocation.y - 2f, shipLocation.z);
         GameObject ship1 = Instantiate(spaceship, spawnLocation1, Quaternion.identity);
