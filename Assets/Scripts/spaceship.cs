@@ -30,6 +30,13 @@ public class spaceship : MonoBehaviour
         Destroy(gameObject);
     }
 
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "bonusShip"){
+            Destroy(col.gameObject);
+        }
+    }
+
 
     /**
         void Update(){
