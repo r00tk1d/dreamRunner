@@ -27,7 +27,7 @@ public class Spawner : MonoBehaviour
             ObstacleSpeed.setSpeed(ObstacleSpeed.getSpeed() - DefValues.increaseSpeed);
 
             //obstacle or item
-            if (Random.value > 0.2f)
+            if (Random.value > 0.9f)
             {
                 //spawn Item
                 int itemNumber = (int)Random.Range(0.0f, (float)items.Length);

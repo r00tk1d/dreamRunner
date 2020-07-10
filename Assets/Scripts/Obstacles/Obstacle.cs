@@ -39,4 +39,8 @@ public class Obstacle : MonoBehaviour
         Destroy(gameObject);
     }
 
+    void setGravityScale(float newGravScale){
+        myRB.gravityScale = newGravScale;
+    }
+
 }

@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
+    void Start(){
+        PlayGamesController.PostToLeaderBoard((long)PlayerPrefs.GetInt("HighScore"));
+    }
     public void PlayGame(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
