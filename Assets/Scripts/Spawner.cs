@@ -6,11 +6,12 @@ public class Spawner : MonoBehaviour
 {
     public GameObject[] obstacles;
     public GameObject[] items;
-    public float spawnTime = DefValues.spawnTime;
+    public float spawnTime;
     private Vector3 spawnLocation = new Vector3(12.0f, 0.0f, 0.0f);
     // Start is called before the first frame update
     void Start()
     {
+        spawnTime = DefValues.spawnTime;
         StartCoroutine(SpawnObstacle());
     }
 
@@ -18,11 +19,13 @@ public class Spawner : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(spawnTime);
+            yield return new WaitForSeconds(Random.Range(spawnTime, spawnTime+0.2f));
 
-            //decrease spawntime
-            spawnTime = spawnTime - DefValues.decreaseSpawnTime;
-
+            //decrease spawntime until maxspawntime is reached
+            if(spawnTime> DefValues.maxSpawnTime){
+                spawnTime = spawnTime - DefValues.decreaseSpawnTime;
+            }
+            
             //increase overall obstaclespeed if max Speed isnt reached
             if (DefValues.maxSpeed > ObstacleSpeed.getSpeed())
             {
@@ -64,7 +67,7 @@ public class Spawner : MonoBehaviour
                         //also SpawnBouncing because its on slot 4 of the obstacles (nneds a fix)
                         break;
                     default:
-                        Debug.Log("Error: No Obstacle with id " + (int)random);
+                        Debug.LogError("No Obstacle with id " + (int)random);
                         break;
                 }
             }

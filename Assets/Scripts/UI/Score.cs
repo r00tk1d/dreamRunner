@@ -19,7 +19,6 @@ public class Score : MonoBehaviour
     void Update()
     {
         int bonusShips = GameObject.FindGameObjectsWithTag("bonusShip").Length;
-        Debug.Log(bonusShips);
         score += Time.deltaTime * (bonusShips + 1);
         scoreText.text = "" + (int)score;
     }
