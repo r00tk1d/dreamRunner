@@ -23,8 +23,12 @@ public class Spawner : MonoBehaviour
             //decrease spawntime
             spawnTime = spawnTime - DefValues.decreaseSpawnTime;
 
-            //increase overall obstaclespeed
-            ObstacleSpeed.setSpeed(ObstacleSpeed.getSpeed() - DefValues.increaseSpeed);
+            //increase overall obstaclespeed if max Speed isnt reached
+            if (DefValues.maxSpeed > ObstacleSpeed.getSpeed())
+            {
+                ObstacleSpeed.setSpeed(ObstacleSpeed.getSpeed() - DefValues.increaseSpeed);
+            }
+
 
             //obstacle or item
             if (Random.value > 0.9f)
@@ -71,11 +75,12 @@ public class Spawner : MonoBehaviour
 
     void SpawnChocolate()
     {
-
-        for (int j = -4; j < 5; j = j + 2)
+        float spawn = Random.Range(-4.5f, 0);
+        for (int j = 0; j < 3; j++)
         {
-            spawnLocation.y = j;
+            spawnLocation.y = spawn;
             GameObject go = Instantiate(obstacles[1], spawnLocation, Quaternion.identity);
+            spawn += 2f;
         }
 
     }
@@ -84,12 +89,8 @@ public class Spawner : MonoBehaviour
     {
         spawnLocation.y = Random.Range(-4.5f, 4.5f);
         GameObject go = Instantiate(obstacles[0], spawnLocation, Quaternion.identity);
-        var renderer = go.GetComponent<Renderer>();
-
-       //Call SetColor using the shader property name "_Color" and setting the color to red
-       renderer.material.SetColor("_Color", Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f));
-        //go.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
-
+        Renderer renderer = go.GetComponent<Renderer>();
+        renderer.material.SetColor("_Color", Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f));
     }
 
     void SpawnItem(int itemNumber)
