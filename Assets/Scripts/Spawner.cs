@@ -84,6 +84,11 @@ public class Spawner : MonoBehaviour
     {
         spawnLocation.y = Random.Range(-4.5f, 4.5f);
         GameObject go = Instantiate(obstacles[0], spawnLocation, Quaternion.identity);
+        var renderer = go.GetComponent<Renderer>();
+
+       //Call SetColor using the shader property name "_Color" and setting the color to red
+       renderer.material.SetColor("_Color", Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f));
+        //go.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
 
     }
 
