@@ -1,28 +1,25 @@
 fileFormatVersion: 2
-guid: ff10608383837864b8f9932fc1adbe7b
+guid: ce6a25c9ecbfcec48a7852b56ccc4346
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7403969822434128192
-    second: slowmotion_animated object_in line_150x150_0
+      213: 4154244047065037181
+    second: Smarties_monster_V2_anim_0
   - first:
-      213: 275608934036182387
-    second: slowmotion_animated object_in line_150x150_1
+      213: 2497959959558390224
+    second: Smarties_monster_V2_anim_1
   - first:
-      213: 6835809712390799957
-    second: slowmotion_animated object_in line_150x150_2
+      213: -8967303260118834513
+    second: Smarties_monster_V2_anim_2
   - first:
-      213: 706868540179679375
-    second: slowmotion_animated object_in line_150x150_3
+      213: -410773176780440242
+    second: Smarties_monster_V2_anim_3
   - first:
-      213: 4186875636715827353
-    second: slowmotion_animated object_in line_150x150_4
+      213: -8803567563608825177
+    second: Smarties_monster_V2_anim_4
   - first:
-      213: 4303083667852392531
-    second: slowmotion_animated object_in line_150x150_5
-  - first:
-      213: -3803759256550927464
-    second: slowmotion_animated object_in line_150x150_6
+      213: 1553790605343509787
+    second: Smarties_monster_V2_anim_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -120,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: slowmotion_animated object_in line_150x150_0
+      name: Smarties_monster_V2_anim_0
       rect:
         serializedVersion: 2
         x: 0
@@ -134,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ce0a16aca0df3990800000000000000
-      internalID: -7403969822434128192
+      spriteID: d79b79f53f6d6a930800000000000000
+      internalID: 4154244047065037181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slowmotion_animated object_in line_150x150_1
+      name: Smarties_monster_V2_anim_1
       rect:
         serializedVersion: 2
         x: 150
@@ -155,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37596228dd823d300800000000000000
-      internalID: 275608934036182387
+      spriteID: 0d180a439598aa220800000000000000
+      internalID: 2497959959558390224
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slowmotion_animated object_in line_150x150_2
+      name: Smarties_monster_V2_anim_2
       rect:
         serializedVersion: 2
         x: 300
@@ -176,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 552083b37bcadde50800000000000000
-      internalID: 6835809712390799957
+      spriteID: fa22a6b123dbd8380800000000000000
+      internalID: -8967303260118834513
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slowmotion_animated object_in line_150x150_3
+      name: Smarties_monster_V2_anim_3
       rect:
         serializedVersion: 2
         x: 450
@@ -197,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f880f40313d4fc900800000000000000
-      internalID: 706868540179679375
+      spriteID: e4d3ebad8f3ac4af0800000000000000
+      internalID: -410773176780440242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slowmotion_animated object_in line_150x150_4
+      name: Smarties_monster_V2_anim_4
       rect:
         serializedVersion: 2
         x: 600
@@ -218,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9903f256535ca1a30800000000000000
-      internalID: 4186875636715827353
+      spriteID: 7a2e1f6b1f173d580800000000000000
+      internalID: -8803567563608825177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slowmotion_animated object_in line_150x150_5
+      name: Smarties_monster_V2_anim_5
       rect:
         serializedVersion: 2
         x: 750
@@ -239,29 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35870251ccf97bb30800000000000000
-      internalID: 4303083667852392531
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slowmotion_animated object_in line_150x150_6
-      rect:
-        serializedVersion: 2
-        x: 900
-        y: 0
-        width: 150
-        height: 150
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8939d2efb15563bc0800000000000000
-      internalID: -3803759256550927464
+      spriteID: b1dc6deb25c209510800000000000000
+      internalID: 1553790605343509787
       vertices: []
       indices: 
       edges: []
