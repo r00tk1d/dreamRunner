@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
+    private bool sound = true;
+    public Text SoundTxt;
     void Start()
     {
         pauseMenuUI.SetActive(false);
@@ -52,5 +54,18 @@ public class PauseMenu : MonoBehaviour
     {
         FindObjectOfType<GameManager>().EndGame();
         PauseButton.Resume();
+    }
+
+    public void switchSound(){
+        if(sound){
+            sound = false;
+            SoundTxt.text = "Sound: Off"; 
+            AudioListener.volume = 0f;
+        } else {
+            sound = true;
+            SoundTxt.text = "Sound: On";
+            AudioListener.volume = 1f;
+        }
+
     }
 }
