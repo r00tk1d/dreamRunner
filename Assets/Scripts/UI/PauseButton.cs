@@ -13,35 +13,53 @@ public class PauseButton : MonoBehaviour
     void Start()
     {
         btn = GetComponent<Button>();
-		btn.onClick.AddListener(TaskOnClick);
+        btn.onClick.AddListener(TaskOnClick);
     }
 
-    void TaskOnClick(){
+    void TaskOnClick()
+    {
         newStatus = true;
-        if(isPaused){
+        if (isPaused)
+        {
             Resume();
         }
-        else{
+        else
+        {
             Pause();
         }
     }
 
-    void Update(){
-        if(isPaused){
+    void Update()
+    {
+        if (isPaused)
+        {
             btn.GetComponentInChildren<Text>().text = "|>";
-        } else {
+        }
+        else
+        {
             btn.GetComponentInChildren<Text>().text = "||";
         }
-        
+
     }
 
-    public static void Resume(){
+    public static void Resume()
+    {
         isPaused = false;
         Time.timeScale = 1f;
+        if (PauseMenu.sound)
+        {
+            AudioListener.volume = 1f;
+        }
+
     }
 
-    public static void Pause(){
+    public static void Pause()
+    {
         isPaused = true;
         Time.timeScale = 0f;
+        if (PauseMenu.sound)
+        {
+            AudioListener.volume = 0.5f;
+        }
     }
 }
