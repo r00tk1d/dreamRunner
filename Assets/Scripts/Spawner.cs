@@ -6,11 +6,12 @@ public class Spawner : MonoBehaviour
 {
     public GameObject[] obstacles;
     public GameObject[] items;
-    public float spawnTime = DefValues.spawnTime;
+    public float spawnTime;
     private Vector3 spawnLocation = new Vector3(12.0f, 0.0f, 0.0f);
     // Start is called before the first frame update
     void Start()
     {
+        spawnTime = DefValues.spawnTime;
         StartCoroutine(SpawnObstacle());
     }
 
@@ -18,13 +19,19 @@ public class Spawner : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(spawnTime);
+            yield return new WaitForSeconds(Random.Range(spawnTime, spawnTime+0.2f));
 
-            //decrease spawntime
-            spawnTime = spawnTime - DefValues.decreaseSpawnTime;
+            //decrease spawntime until maxspawntime is reached
+            if(spawnTime> DefValues.maxSpawnTime){
+                spawnTime = spawnTime - DefValues.decreaseSpawnTime;
+            }
+            
+            //increase overall obstaclespeed if max Speed isnt reached
+            if (DefValues.maxSpeed > ObstacleSpeed.getSpeed())
+            {
+                ObstacleSpeed.setSpeed(ObstacleSpeed.getSpeed() - DefValues.increaseSpeed);
+            }
 
-            //increase overall obstaclespeed
-            ObstacleSpeed.setSpeed(ObstacleSpeed.getSpeed() - DefValues.increaseSpeed);
 
             //obstacle or item
             if (Random.value > 0.9f)
@@ -60,7 +67,7 @@ public class Spawner : MonoBehaviour
                         //also SpawnBouncing because its on slot 4 of the obstacles (nneds a fix)
                         break;
                     default:
-                        Debug.Log("Error: No Obstacle with id " + (int)random);
+                        Debug.LogError("No Obstacle with id " + (int)random);
                         break;
                 }
             }
@@ -71,11 +78,12 @@ public class Spawner : MonoBehaviour
 
     void SpawnChocolate()
     {
-
-        for (int j = -4; j < 5; j = j + 2)
+        float spawn = Random.Range(-4.5f, 0);
+        for (int j = 0; j < 3; j++)
         {
-            spawnLocation.y = j;
+            spawnLocation.y = spawn;
             GameObject go = Instantiate(obstacles[1], spawnLocation, Quaternion.identity);
+            spawn += 2f;
         }
 
     }
@@ -84,7 +92,8 @@ public class Spawner : MonoBehaviour
     {
         spawnLocation.y = Random.Range(-4.5f, 4.5f);
         GameObject go = Instantiate(obstacles[0], spawnLocation, Quaternion.identity);
-
+        Renderer renderer = go.GetComponent<Renderer>();
+        renderer.material.SetColor("_Color", Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f));
     }
 
     void SpawnItem(int itemNumber)

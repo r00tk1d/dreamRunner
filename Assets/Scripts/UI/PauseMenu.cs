@@ -7,9 +7,19 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
+    public static bool sound = true;
+    public Text SoundTxt;
     void Start()
     {
         pauseMenuUI.SetActive(false);
+        if (sound)
+        {
+            SoundTxt.text = "Sound: On";
+        }
+        else
+        {
+            SoundTxt.text = "Sound: Off";
+        }
     }
     // Update is called once per frame
     void Update()
@@ -52,5 +62,22 @@ public class PauseMenu : MonoBehaviour
     {
         FindObjectOfType<GameManager>().EndGame();
         PauseButton.Resume();
+    }
+
+    public void switchSound()
+    {
+        if (sound)
+        {
+            sound = false;
+            SoundTxt.text = "Sound: Off";
+            AudioListener.volume = 0f;
+        }
+        else
+        {
+            sound = true;
+            SoundTxt.text = "Sound: On";
+            AudioListener.volume = 1f;
+        }
+
     }
 }

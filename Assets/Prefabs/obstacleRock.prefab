@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8308218473447130058}
   - component: {fileID: 8308218473447130061}
   - component: {fileID: 5419123227513201988}
+  - component: {fileID: -3820483614110771191}
   m_Layer: 9
   m_Name: obstacleRock
   m_TagString: obstacle
@@ -28,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8308218473447130056}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.605865, y: -2.3945823, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 9.348, y: -2.1367, z: 0}
+  m_LocalScale: {x: 0.65614957, y: 0.65614957, z: 0.65614957}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,7 +74,8 @@ SpriteRenderer:
   m_SortingLayerID: 937126371
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ec6605bbb72c89675854590de0aaa48a, type: 3}
+  m_Sprite: {fileID: 2497959959558390224, guid: ce6a25c9ecbfcec48a7852b56ccc4346,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,9 +99,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.042489875, y: 0}
   serializedVersion: 2
-  m_Radius: 0.44
+  m_Radius: 0.6864425
 --- !u!50 &8308218473447130061
 Rigidbody2D:
   serializedVersion: 4
@@ -133,3 +135,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e79820d46e67b6e971de9d8064e68b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &-3820483614110771191
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8308218473447130056}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: df9618f5cecdd14449ef94769ba8d05c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

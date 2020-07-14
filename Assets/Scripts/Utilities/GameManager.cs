@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     bool gameHasEnded = false;
+    private bool newHighScore = false;
+    public GameOver gameOverScreen;
 
     public void EndGame ()
     {
@@ -14,16 +16,11 @@ public class GameManager : MonoBehaviour
             int currentScore = (int)FindObjectOfType<Score>().score;
             if(PlayerPrefs.GetInt("HighScore") < currentScore){
                 PlayerPrefs.SetInt("HighScore", currentScore);
+                newHighScore = true;
             }
+            gameOverScreen.startGameOverAnimation(currentScore, newHighScore);
             PlayGamesController.PostToLeaderBoard((long)PlayerPrefs.GetInt("HighScore"));
-            Restart();
         }
         
-    }
-
-    void Restart(){
-        Time.timeScale = 1.0f;
-        ObstacleSpeed.setSpeed(DefValues.startSpeed);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
