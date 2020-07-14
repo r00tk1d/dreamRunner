@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5706858171540968169}
   - component: {fileID: 9023782226922615579}
   - component: {fileID: 5025763605631573799}
-  - component: {fileID: -6924828008501307397}
+  - component: {fileID: -5469624687495997617}
   m_Layer: 9
   m_Name: itemSlowMo
   m_TagString: obstacle
@@ -150,7 +150,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!95 &-6924828008501307397
+--- !u!95 &-5469624687495997617
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -158,9 +158,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3916390969065655930}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 790af6482f7b2e3429ad0ed3b9336b99, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5a7c7a3c64a2c9f72a0f48cafd9623ec, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
