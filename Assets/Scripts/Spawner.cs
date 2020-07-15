@@ -19,19 +19,22 @@ public class Spawner : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(spawnTime, spawnTime+0.2f));
+            yield return new WaitForSeconds(Random.Range(spawnTime, spawnTime + 0.2f));
 
             //decrease spawntime until maxspawntime is reached
-            if(spawnTime> DefValues.maxSpawnTime){
+            if (spawnTime > DefValues.maxSpawnTime)
+            {
                 spawnTime = spawnTime - DefValues.decreaseSpawnTime;
             }
-            
+
             //increase overall obstaclespeed if max Speed isnt reached
             if (DefValues.maxSpeed < ObstacleSpeed.getSpeed())
             {
                 ObstacleSpeed.setSpeed(ObstacleSpeed.getSpeed() - DefValues.increaseSpeed);
                 Debug.Log(ObstacleSpeed.getSpeed());
-            }else{
+            }
+            else
+            {
                 Debug.Log("bla");
             }
 
@@ -68,6 +71,7 @@ public class Spawner : MonoBehaviour
                         break;
                     case 3:
                         //also SpawnBouncing because its on slot 4 of the obstacles (nneds a fix)
+                        SpawnRock();
                         break;
                     default:
                         Debug.LogError("No Obstacle with id " + (int)random);
@@ -99,12 +103,6 @@ public class Spawner : MonoBehaviour
         renderer.material.SetColor("_Color", Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f));
     }
 
-    void SpawnItem(int itemNumber)
-    {
-        spawnLocation.y = Random.Range(-4.5f, 4.5f);
-        GameObject go = Instantiate(items[itemNumber], spawnLocation, Quaternion.identity);
-    }
-
     void SpawnBouncing()
     {
         spawnLocation.y = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).y + 0.7f;
@@ -113,4 +111,12 @@ public class Spawner : MonoBehaviour
         GameObject ball = Instantiate(obstacles[3], spawnLocation, Quaternion.identity); //TODO index sollte nicht hardgecodet sein
 
     }
+
+    void SpawnItem(int itemNumber)
+    {
+        spawnLocation.y = Random.Range(-4.5f, 4.5f);
+        GameObject go = Instantiate(items[itemNumber], spawnLocation, Quaternion.identity);
+    }
+
+
 }
