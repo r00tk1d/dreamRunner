@@ -31,13 +31,7 @@ public class Spawner : MonoBehaviour
             if (DefValues.maxSpeed < ObstacleSpeed.getSpeed())
             {
                 ObstacleSpeed.setSpeed(ObstacleSpeed.getSpeed() - DefValues.increaseSpeed);
-                Debug.Log(ObstacleSpeed.getSpeed());
             }
-            else
-            {
-                Debug.Log("bla");
-            }
-
 
             //obstacle or item
             if (Random.value > 0.9f)

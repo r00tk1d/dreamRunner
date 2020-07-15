@@ -11,10 +11,18 @@ using UnityEngine.UI;
 public class PlayGamesController : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Text highscoreText;
     void Start()
     {
-        AuthenticateUser();
+        //Bei Release rausnehmen
+        if (PlayerPrefs.GetInt("FirstPlay") == 0)
+        {
+            PlayerPrefs.DeleteAll();
+            PlayerPrefs.SetInt("FirstPlay", 1);
+        }
 
+        highscoreText.text = "Best: " + PlayerPrefs.GetInt("HighScore");
+        AuthenticateUser();
     }
 
     private void AuthenticateUser()
