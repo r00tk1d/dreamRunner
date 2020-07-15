@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TouchToRemove : MonoBehaviour
 {
+    public AudioSource sound;
     void Update()
     {
         if (!PauseButton.isPaused && Input.touchCount > 0)
@@ -18,7 +19,7 @@ public class TouchToRemove : MonoBehaviour
                     if (hit.collider != null && hit.collider.gameObject.name == "obstacleChocolate(Clone)")
                     {
                         Destroy(hit.collider.gameObject);
-                        //FindObjectOfType<Score>().score++;
+                        sound.Play();
                     }
                 }
             }
