@@ -27,9 +27,12 @@ public class Spawner : MonoBehaviour
             }
             
             //increase overall obstaclespeed if max Speed isnt reached
-            if (DefValues.maxSpeed > ObstacleSpeed.getSpeed())
+            if (DefValues.maxSpeed < ObstacleSpeed.getSpeed())
             {
                 ObstacleSpeed.setSpeed(ObstacleSpeed.getSpeed() - DefValues.increaseSpeed);
+                Debug.Log(ObstacleSpeed.getSpeed());
+            }else{
+                Debug.Log("bla");
             }
 
 
