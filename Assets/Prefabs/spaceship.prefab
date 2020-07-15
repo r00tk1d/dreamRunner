@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5782382412532651827}
   - component: {fileID: 5782382412532651823}
   - component: {fileID: 5782382412532651822}
+  - component: {fileID: 5735223942804097865}
   m_Layer: 8
   m_Name: spaceship
   m_TagString: Player
@@ -151,3 +152,22 @@ MonoBehaviour:
   slots:
   - {fileID: 0}
   - {fileID: 0}
+--- !u!95 &5735223942804097865
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5782382412532651828}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5976a30454b9f5eeca7f6bb30d775798, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
