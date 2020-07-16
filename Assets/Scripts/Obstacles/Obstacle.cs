@@ -7,10 +7,11 @@ public class Obstacle : MonoBehaviour
     private float speed = ObstacleSpeed.getSpeed();
     private Rigidbody2D myRB;
     public AudioSource crashSound;
-    // Start is called before the first frame update
+    spaceship ship;
     void Start()
     {
         myRB = GetComponent<Rigidbody2D>();
+        ship = GameObject.FindWithTag("Player").GetComponent<spaceship>();
     }
 
     // Update is called once per frame
@@ -32,6 +33,7 @@ public class Obstacle : MonoBehaviour
         }
         if (col.gameObject.tag == "bonusShip"){
             Destroy(col.gameObject);
+            ship.destroyBonusshipPlay();
         }
 
     }

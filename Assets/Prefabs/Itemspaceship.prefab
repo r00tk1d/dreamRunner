@@ -121,6 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  collectItemSound: {fileID: 0}
+  destroyBonusshipSound: {fileID: 0}
 --- !u!58 &7835501733745675409
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -134,9 +136,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0126950815, y: -0.0026598822}
+  m_Offset: {x: 0.09974626, y: -0.0026598822}
   serializedVersion: 2
-  m_Radius: 0.45084202
+  m_Radius: 0.5632834
 --- !u!114 &7835501733745675408
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,17 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EffectSlowmo : MonoBehaviour
 {
-    public float slowmoTimer = 5f;
-    public float slotSlowdownTime = 3f;
+    public float slowmoTimer = 3f;
+    public float slotSlowdownTime = 4f;
     private AudioSource inGameMusic;
     public void Use()
     {
         StartCoroutine(Effect());
         StartCoroutine(ItemslotSlowdownTime());
-        
+
     }
 
 
@@ -20,17 +21,15 @@ public class EffectSlowmo : MonoBehaviour
         inGameMusic = GameObject.FindGameObjectWithTag("music").GetComponent<AudioSource>();
         Time.timeScale = 0.5f;
         inGameMusic.pitch = 0.5f;
-        yield return new WaitForSecondsRealtime(slowmoTimer);
-        Debug.Log(Time.deltaTime * slowmoTimer);
-        if(Time.timeScale == 0.5f){
-            Time.timeScale = 1.0f;
-        }
+        yield return new WaitForSeconds(slowmoTimer);
+        Time.timeScale = 1.0f;
         inGameMusic.pitch = 1.0f;
     }
 
     IEnumerator ItemslotSlowdownTime()
     {
-        yield return new WaitForSecondsRealtime(slotSlowdownTime);
+        gameObject.GetComponent<Button>().interactable = false;
+        yield return new WaitForSeconds(slotSlowdownTime);
         Destroy(gameObject);
     }
 

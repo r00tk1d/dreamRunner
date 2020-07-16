@@ -144,4 +144,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slowmoTimer: 3
-  slotSlowdownTime: 3
+  slotSlowdownTime: 4

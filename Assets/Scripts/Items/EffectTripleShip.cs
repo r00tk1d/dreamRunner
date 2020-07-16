@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EffectTripleShip : MonoBehaviour
 {
@@ -35,6 +36,7 @@ public class EffectTripleShip : MonoBehaviour
 
     IEnumerator ItemslotSlowdownTime()
     {
+        gameObject.GetComponent<Button>().interactable = false;
         yield return new WaitForSecondsRealtime(slotSlowdownTime);
         Destroy(gameObject);
     }

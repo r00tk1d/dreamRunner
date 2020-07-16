@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EffectGravity : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class EffectGravity : MonoBehaviour
 
     IEnumerator ItemslotSlowdownTime()
     {
+        gameObject.GetComponent<Button>().interactable = false;
         yield return new WaitForSecondsRealtime(slotSlowdownTime);
         Destroy(gameObject);
     }

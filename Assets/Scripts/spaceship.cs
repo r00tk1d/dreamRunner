@@ -6,14 +6,17 @@ public class spaceship : MonoBehaviour
 {
     public float speed;
     public AudioSource collectItemSound;
+    public AudioSource destroyBonusshipSound;
     private float deltaX, deltaY;
     private Joystick joystick;
     private Rigidbody2D rb2d;
+    spaceship ship;
 
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         joystick = (Joystick)FindObjectOfType(typeof(Joystick));
+        ship = GameObject.FindWithTag("Player").GetComponent<spaceship>();
     }
 
     void FixedUpdate()
@@ -35,11 +38,16 @@ public class spaceship : MonoBehaviour
     {
         if (col.gameObject.tag == "bonusShip"){
             Destroy(col.gameObject);
+            ship.destroyBonusshipPlay();
         }
     }
 
-    public void collectItem(){
+    public void collectItemPlay(){
         collectItemSound.Play();
+    }
+
+    public void destroyBonusshipPlay(){
+        destroyBonusshipSound.Play();
     }
 
 

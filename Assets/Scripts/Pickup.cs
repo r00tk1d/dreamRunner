@@ -11,7 +11,7 @@ public class Pickup : MonoBehaviour
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-        ship = FindObjectOfType<spaceship>();
+        ship = GameObject.FindWithTag("Player").GetComponent<spaceship>();
     }
 
     void OnTriggerStay2D(Collider2D col)
@@ -22,7 +22,7 @@ public class Pickup : MonoBehaviour
             {
                 if (inventory.isFull[i] == false)
                 {       
-                    ship.collectItem();
+                    ship.collectItemPlay();
                     //ADD ITEM
                     inventory.isFull[i] = true;
                     Instantiate(itemButton, inventory.slots[i].transform, false);
