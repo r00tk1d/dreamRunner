@@ -109,7 +109,7 @@ public class Spawner : MonoBehaviour
     void SpawnItem(int itemNumber)
     {
         //multipler Item erst nach score 50 spawnen
-        if (!(itemNumber == 2 && (int)FindObjectOfType<Score>().score < 50))
+        if (!(itemNumber == 1 && (int)FindObjectOfType<Score>().score < 50))
         {
             spawnLocation.y = Random.Range(-4.5f, 4.5f);
             GameObject go = Instantiate(items[itemNumber], spawnLocation, Quaternion.identity);

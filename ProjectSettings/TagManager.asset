@@ -6,6 +6,7 @@ TagManager:
   tags:
   - obstacle
   - bonusShip
+  - music
   layers:
   - Default
   - TransparentFX

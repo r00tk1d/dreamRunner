@@ -5,6 +5,7 @@ using UnityEngine;
 public class spaceship : MonoBehaviour
 {
     public float speed;
+    public AudioSource collectItemSound;
     private float deltaX, deltaY;
     private Joystick joystick;
     private Rigidbody2D rb2d;
@@ -35,6 +36,10 @@ public class spaceship : MonoBehaviour
         if (col.gameObject.tag == "bonusShip"){
             Destroy(col.gameObject);
         }
+    }
+
+    public void collectItem(){
+        collectItemSound.Play();
     }
 
 
