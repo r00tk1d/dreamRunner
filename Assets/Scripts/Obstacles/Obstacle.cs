@@ -6,6 +6,7 @@ public class Obstacle : MonoBehaviour
 {
     private float speed = ObstacleSpeed.getSpeed();
     private Rigidbody2D myRB;
+    public AudioSource crashSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class Obstacle : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
+            crashSound.Play();
             FindObjectOfType<GameManager>().EndGame();
             Destroy(col.gameObject);
         }

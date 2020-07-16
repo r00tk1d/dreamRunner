@@ -44,6 +44,7 @@ public class PauseButton : MonoBehaviour
 
     public static void Resume()
     {
+        newStatus = true;
         isPaused = false;
         Time.timeScale = 1f;
         if (PauseMenu.sound)
