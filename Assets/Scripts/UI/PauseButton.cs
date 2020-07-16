@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-// look PauseMenu for better understanding
+// PauseMenu for better understanding
 public class PauseButton : MonoBehaviour
 {
-    // Start is called before the first frame update
     public static bool isPaused = false;
     public static bool newStatus = false;
     private Button btn;
@@ -44,7 +43,6 @@ public class PauseButton : MonoBehaviour
 
     public static void Resume()
     {
-        newStatus = true;
         isPaused = false;
         Time.timeScale = 1f;
         if (PauseMenu.sound)

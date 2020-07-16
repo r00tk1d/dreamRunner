@@ -10,12 +10,11 @@ using UnityEngine.UI;
 
 public class PlayGamesController : MonoBehaviour
 {
-    // Start is called before the first frame update
     public Text highscoreText;
     void Start()
     {
-        //Bei Release rausnehmen
-        if (PlayerPrefs.GetInt("FirstPlay") == 0)
+
+        if (PlayerPrefs.GetInt("FirstPlay") == 0 && DefValues.resetPlayPrefs)
         {
             PlayerPrefs.DeleteAll();
             PlayerPrefs.SetInt("FirstPlay", 1);
@@ -32,7 +31,7 @@ public class PlayGamesController : MonoBehaviour
         PlayGamesPlatform.Activate();
         Social.localUser.Authenticate((bool success) =>
         {
-            if (success == true)
+            if (success)
             {
                 Debug.Log("Logged In to Google Play Services");
 

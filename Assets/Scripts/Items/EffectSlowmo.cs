@@ -8,6 +8,11 @@ public class EffectSlowmo : MonoBehaviour
     public float slowmoTimer = 3f;
     public float slotSlowdownTime = 4f;
     private AudioSource inGameMusic;
+
+    void Start()
+    {
+        inGameMusic = GameObject.FindGameObjectWithTag("music").GetComponent<AudioSource>();
+    }
     public void Use()
     {
         StartCoroutine(Effect());
@@ -15,10 +20,8 @@ public class EffectSlowmo : MonoBehaviour
 
     }
 
-
     IEnumerator Effect()
-    {
-        inGameMusic = GameObject.FindGameObjectWithTag("music").GetComponent<AudioSource>();
+    {        
         Time.timeScale = 0.5f;
         inGameMusic.pitch = 0.5f;
         yield return new WaitForSeconds(slowmoTimer);

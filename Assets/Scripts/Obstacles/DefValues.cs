@@ -5,4 +5,7 @@ public static class DefValues{
     public static float spawnTime = 2.0f; 
     public static float decreaseSpawnTime = 0.015f;
     public static float maxSpawnTime = 0.4f;
+
+    //WARNING: RESETS THE HIGHSCORE IF TRUE
+    public static bool resetPlayPrefs = false;
 }

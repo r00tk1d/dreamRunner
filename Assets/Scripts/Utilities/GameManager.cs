@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     public void EndGame ()
     {
-        if(gameHasEnded == false) {
+        if(!gameHasEnded) {
             bool gameHasEnded = true;
             int currentScore = (int)FindObjectOfType<Score>().score;
             if(PlayerPrefs.GetInt("HighScore") < currentScore){
