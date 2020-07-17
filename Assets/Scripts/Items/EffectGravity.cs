@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class EffectGravity : MonoBehaviour
 {
-    public float slotSlowdownTime = 3f;
+    public float slotSlowdownTime = 1f;
     public void Use()
     {
         Effect();

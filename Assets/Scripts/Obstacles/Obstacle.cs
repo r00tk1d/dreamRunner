@@ -11,7 +11,8 @@ public class Obstacle : MonoBehaviour
     void Start()
     {
         myRB = GetComponent<Rigidbody2D>();
-        ship = GameObject.FindWithTag("Player").GetComponent<spaceship>();
+        
+        
     }
 
     // Update is called once per frame
@@ -33,6 +34,7 @@ public class Obstacle : MonoBehaviour
         }
         if (col.gameObject.tag == "bonusShip"){
             Destroy(col.gameObject);
+            ship = GameObject.FindWithTag("Player").GetComponent<spaceship>();
             ship.destroyBonusshipPlay();
         }
 

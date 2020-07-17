@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcb9ca67c45aa24088e8c0b31e2297f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotSlowdownTime: 1
+  slotSlowdownTime: 6
   spaceship: {fileID: 7835501733745675402, guid: 512e7c891845e4e24be1dea4c233cfd6,
     type: 3}
 --- !u!82 &-8628816591597067218

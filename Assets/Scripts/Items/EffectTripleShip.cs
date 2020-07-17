@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class EffectTripleShip : MonoBehaviour
 {
-    public float slotSlowdownTime = 1f;
+    public float slotSlowdownTime = 6f;
 
     public GameObject spaceship;
     private Vector3 spawnLocation = new Vector3(-4.0f, 0.0f, 0.0f);

@@ -9,6 +9,7 @@ public class GameOver : MonoBehaviour
     public GameObject gameOverUI;
     public Text gameOverText;
     public Text newHighscoreText;
+    public AudioSource highscoreSound;
     void Start()
     {
         gameOverUI.SetActive(false);
@@ -21,11 +22,11 @@ public class GameOver : MonoBehaviour
             gameOverText.color = Color.red;
             newHighscoreText.text = "New Highscore!";
         }
-        StartCoroutine(upCounter(currentScore));
+        StartCoroutine(upCounter(currentScore, newHighscore));
     }
 
 
-    IEnumerator upCounter(int number)
+    IEnumerator upCounter(int number, bool newHighscore)
     {
         float slowDown = 1 / (float)number;
         for (int i = 0; i <= number; i++)
@@ -42,6 +43,10 @@ public class GameOver : MonoBehaviour
                 gameOverText.text = "Score: " + i;
             }
 
+        }
+        if(newHighscore){
+            highscoreSound.Play();
+            yield return new WaitForSeconds(1f);
         }
         yield return new WaitForSeconds(1.4f);
         Restart();
