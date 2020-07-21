@@ -9,6 +9,14 @@ public class GameManager : MonoBehaviour
     private bool newHighScore = false;
     public GameOver gameOverScreen;
 
+    void Update()
+    {
+        if(!GameObject.FindWithTag("Player")&&!gameHasEnded){
+            EndGame();
+            gameHasEnded = true;
+        }
+    }
+
     public void EndGame ()
     {
         if(!gameHasEnded) {
