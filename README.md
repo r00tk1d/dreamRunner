@@ -1,8 +1,11 @@
 # Dream Runner
 Control your spaceship in a skill-based endless runner game. Interact with obstacles and chase for the stars (and the highscore)!
+
+[Download via Google Play Store](https://play.google.com/store/apps/details?id=com.MJProduction.DreamRunner)
+
 ![Main Menu](https://github.com/r00tk1d/dreamRunner/blob/master/Marketing/PlayStore%20Pictures/Done_Picture%201.png)
-![Game](https://github.com/r00tk1d/dreamRunner/blob/master/Marketing/PlayStore%20Pictures/Done_Picture%202.png)
-![Game](https://github.com/r00tk1d/dreamRunner/blob/master/Marketing/PlayStore%20Pictures/Done_Picture%203.png)
+![Game Interact](https://github.com/r00tk1d/dreamRunner/blob/master/Marketing/PlayStore%20Pictures/Done_Picture%202.png)
+![Game PowerUps](https://github.com/r00tk1d/dreamRunner/blob/master/Marketing/PlayStore%20Pictures/Done_Picture%203.png)
 
 # CURRENT RELEASE
 The first release of the game features a Candyland world in which you must manoeuvre around bouncing ice-cream, smarties monster and chocolate bars. But wait… chocolate bars are interactive!?!? Play to find out more..
